@@ -5,15 +5,19 @@ p {
 
 p.info {
 	font-size: small;
+	background-color: #dfdfdf;
 }
 
 h1 {
-	background-color: #dfdfdf;
+	color: white;
+	text-shadow: 1px 1px 2px nevy;
 }
 
 h2 {
 	border: solid 1px black;
 	margin: 5px;
+	font-family: cursive;
+	background: linear-gradient(to right,white, #ffefaf);
 }
 
 div#zentai {
