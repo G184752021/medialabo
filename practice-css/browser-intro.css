@@ -1,13 +1,14 @@
+
 p {
 	color: navy;
 }
 
 p.info {
-	font-size: 10pt;
+	font-size: small;
 }
 
 h1 {
-	background-color: #7f7fcf;
+	background-color: #dfdfdf;
 }
 
 h2 {
@@ -16,9 +17,20 @@ h2 {
 }
 
 div#zentai {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: 200px 200px;
+	grid-gap: 10px;   
+	padding: 5px;
 	width: 1024px;
+}
+
+img.sign {
+    float: right;   /* 画像を右に浮かせる */
+
+    width: 100px;
+    height: 100px;
+    margin: 10px 0 10px 10px;
 }
 
 div#zentai > div {
