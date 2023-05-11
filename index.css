@@ -1,0 +1,25 @@
+body{
+    background-color: #ffe4e1;
+}
+.bigtitle{
+    color:black;
+    background-color: rgba(112, 225, 245, 0.5);
+    border: solid rgb(115, 205, 247);
+}
+ul{
+    color: black;
+    border: dashed green;
+}
+li{
+    list-style-type: none;
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color:red
+}
+a:hover{
+    text-decoration:none;
+    color: white;
+}
