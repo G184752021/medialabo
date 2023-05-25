@@ -14,6 +14,16 @@ let data = [
 //// 注意: 以上は編集しないこと!
 // 練習4-2 メッセージ追加プログラム
 
+// 練習4-3 写真表作成プログラム
+let File=["taro.png","jiro.png","hanako.png"];
+let photoTable = document.querySelector("#phototable");
+for(let a of Files){
+	let Element=document.createElement('img');
+	Element.setAttribute('src',a);
+	let pElement =document.createElement('p');
+	pElement.insertAdjacentElement('beforeend',Element);
+	photoTable.insertAdjacentElement('beforeend',pElement);
+}
 
 // 練習4-4 箇条書き削除プログラム
 
