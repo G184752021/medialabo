@@ -26,7 +26,7 @@ for(let a of Files){
 }
 
 // 練習4-4 箇条書き削除プログラム
-let d1 =document.querySelector('li#location');
+let d1 =document.querySelectorAll('ul#location > li');
 d1.textContent='';
 
 
