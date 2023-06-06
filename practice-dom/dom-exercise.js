@@ -18,11 +18,11 @@ let data = [
 let File=["taro.png","jiro.png","hanako.png"];
 let photoTable = document.querySelector("#phototable");
 for(let a of Files){
-	let Element=document.createElement('img');
-	Element.setAttribute('src',a);
-	let pElement =document.createElement('p');
-	pElement.insertAdjacentElement('beforeend',Element);
-	photoTable.insertAdjacentElement('beforeend',pElement);
+	let E=document.createElement('img');
+	E.setAttribute('src',a);
+	let cc=document.createElement('p');
+	cc.insertAdjacentElement('beforeend',E);
+	photoTable.insertAdjacentElement('beforeend',cc);
 }
 
 // 練習4-4 箇条書き削除プログラム
