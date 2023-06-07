@@ -23,9 +23,9 @@ h2.insertAdjacentElement('afterend',p);
 // 練習4-3 写真表作成プログラム
 let aa = ["taro.png","jiro.png","hanako.png"];
 let photoTable = document.querySelector("#phototable");
-for (let a of aa) {
+for (let ee of aa) {
     let cc = document.createElement('img');
-    imagen.setAttribute('src', a);
+    imagen.setAttribute('src', ee);
     let bb = document.createElement('p');
     bb.insertAdjacentElement('beforeend',cc);
     photoTable.insertAdjacentElement('beforeend',bb);
