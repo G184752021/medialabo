@@ -25,7 +25,7 @@ let aa = ["taro.png","jiro.png","hanako.png"];
 let photoTable = document.querySelector("#phototable");
 for (let ee of aa) {
     let cc = document.createElement('img');
-    imagen.setAttribute('src', ee);
+    cc.setAttribute('src', ee);
     let bb = document.createElement('p');
     bb.insertAdjacentElement('beforeend',cc);
     photoTable.insertAdjacentElement('beforeend',bb);
