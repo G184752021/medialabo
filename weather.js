@@ -54,7 +54,7 @@ let data = {
   botan.addEventListener('click', sendRequest);
 
   function sendRequest() {
-    let n = document.querySelector('#city[name="ichirann"]');
+    let n = document.querySelector('#nisita[name="itiran"]');
     let suuzi = n.value;
     let rink = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + suuzi +'.json';
 
