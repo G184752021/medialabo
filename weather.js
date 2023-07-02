@@ -51,12 +51,12 @@ let data = {
 
   
 let bbq = document.querySelector('button#print');
-bbq.addEventListener('click', sendRequest);
+bbq.addEventListener('click', showSelectResult);
 
   function sendRequest() {
-    let a = document.querySelector('#nishita[name="itiran"]');
-    let num = a.value;
-    let link = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + num + '.json';
+    let s = document.querySelector('#nishita[name="itiran"]');
+    let idx = s.selectedIndex
+    let link = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + idx + '.json';
   
     // 通信開始
     axios.get(link)
