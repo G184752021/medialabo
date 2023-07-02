@@ -54,8 +54,8 @@ let bbq = document.querySelector('button#print');
 bbq.addEventListener('click', sendRequest);
   function sendRequest() {
     let s = document.querySelector('#nishita[name="itiran"]');
-    let idx = s.selectedIndex
-    let link = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + idx + '.json';
+    let number = s.selectedIndex
+    let link = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + number + '.json';
   
     // 通信開始
     axios.get(link)
@@ -129,11 +129,6 @@ bbq.addEventListener('click', sendRequest);
 
   let presure = document.querySelector('span#presure');
   presure.textContent = "気圧は"+data.main.pressure;
-  
-
-    
-    
-//tenkigazou.src = png;
 
     // data をコンソールに出力
     console.log(data);
