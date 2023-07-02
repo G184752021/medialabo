@@ -14,7 +14,7 @@ let data = {
   "base": "stations",
   "main": {
     "temp": 9.94,
-    "feels_like": 8.65,
+    "feel": 8.65,
     "temp_min": 9.94,
     "temp_max": 9.94,
     "pressure": 1022,
@@ -48,36 +48,18 @@ let data = {
 
 
 ////////// 課題3-2 ここからプログラムを書こう
-/*console.log(data.name);
-console.log('最高気温'+data.main.temp_max);
-console.log('最低気温'+data.main.temp_min);
-	console.log(data.coord);
-  console.log(data.weather);
-  console.log(data.main);
-  console.log(data.visibility);
-  console.log(data.wind);
-  console.log(data.clouds);
-  console.log(data.dt);
-  console.log(data.sys);
-  console.log(data.timezone);
-  console.log(data.id);
-  console.log(data.name);
-  console.log(data.cod);*/
 
   
   let botan = document.querySelector('button#print');
   botan.addEventListener('click', sendRequest);
 
   function sendRequest() {
-    // URL を設定
-    //let a ='2643743';
-    //let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + a +'.json';
     let n = document.querySelector('#nishita[name="itiran"]');
     let suuzi = n.value;
-    let rink = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + suuzi +'.json';
-
+    let link = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + suuzi + '.json';
+  
     // 通信開始
-    axios.get(rink)
+    axios.get(link)
       .then(showResult)
       .catch(showError)
       .then(finish);
@@ -89,10 +71,9 @@ console.log('最低気温'+data.main.temp_min);
     if(gi === true){
       imagetenki.remove();
     }
-    // サーバから送られてきたデータを出力
+
     let data = resp.data;
   
-    // data が文字列型なら，オブジェクトに変換する
     if (typeof data === 'string') {
       data = JSON.parse(data);
     }
@@ -104,30 +85,30 @@ console.log('最低気温'+data.main.temp_min);
   }
   let tennkihantei;
   if(data.weather[0].description==="曇りがち"){
-    tennkihantei = "雲多め";
+    tennkihantei = "曇りがち";
     gi = true;
-  }else if(data.weather[0].description==="小雨"){
-    tennkihantei = "小雨なので置き傘持って行くといいよ";
+  }else if(data.weather[0].description==="晴れ"){
+    tennkihantei = "晴れ";
     gi = true;
   }else if(data.weather[0].description==="霧"){
-    tennkihantei = "霧が発生します。";
+    tennkihantei = "霧";
     gi = true;
   }else if(data.weather[0].description==="厚い雲"){
-    tennkihantei = "雲厚め";
+    tennkihantei = "曇り";
     gi = true;
   }else if(data.weather[0].description==="晴天"){
-    tennkihantei = "雲ひとつない空(晴れ)";
+    tennkihantei = "晴天";
     gi = true;
   }else{
-    tennkihantei = "晴れ";
+    tennkihantei = "小雨";
     gi = true;
   }
 
   let kuni = document.querySelector('span#kuni');
   kuni.textContent = data.name +"の天気";
 
-  let tenki = document.querySelector('span#tenki');
-  tenki.textContent = tennkihantei;
+  let tenki = document.querySelector('span#weather');
+  weather.textContent = tennkihantei;
 
   let temp = document.querySelector('span#temp');
   temp.textContent = "気温は"+data.main.temp;
@@ -138,8 +119,8 @@ console.log('最低気温'+data.main.temp_min);
   let temp_min = document.querySelector('span#temp_min');
   temp_min.textContent = "最低気温は"+data.main.temp_min;
 
-  let feels = document.querySelector('span#feels');
-  feels.textContent = "体感気温はまぁ大体"+data.main.feels+"位ってところかな";
+  let feel = document.querySelector('span#feel');
+  feel.textContent = "体感気温は"+data.main.feel;
 
   let humidity = document.querySelector('span#humidity');
   humidity.textContent = "humidity is "+data.main.humidity+"%(may be)";
