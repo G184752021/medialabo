@@ -50,13 +50,13 @@ let data = {
 ////////// 課題3-2 ここからプログラムを書こう
 
   
-  let botan = document.querySelector('button#print');
-  botan.addEventListener('click', sendRequest);
+let a = document.querySelector('#sendRequest');
+a.addEventListener('click', sendRequest);
 
   function sendRequest() {
-    let n = document.querySelector('#nishita[name="itiran"]');
-    let suuzi = n.value;
-    let link = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + suuzi + '.json';
+    let a = document.querySelector('#nishita[name="itiran"]');
+    let num = a.value;
+    let link = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + num + '.json';
   
     // 通信開始
     axios.get(link)
@@ -107,7 +107,7 @@ let data = {
   let kuni = document.querySelector('span#kuni');
   kuni.textContent = data.name +"の天気";
 
-  let tenki = document.querySelector('span#weather');
+  let weather = document.querySelector('span#weather');
   weather.textContent = tennkihantei;
 
   let temp = document.querySelector('span#temp');
