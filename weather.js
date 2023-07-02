@@ -56,10 +56,10 @@ let data = {
   function sendRequest() {
     let n = document.querySelector('#nishita[name="itiran"]');
     let suuzi = n.value;
-    let rink = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + suuzi + '.json';
+    let link = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + suuzi + '.json';
   
     // 通信開始
-    axios.get(rink)
+    axios.get(link)
       .then(showResult)
       .catch(showError)
       .then(finish);
