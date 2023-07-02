@@ -51,8 +51,7 @@ let data = {
 
   
 let bbq = document.querySelector('button#print');
-bbq.addEventListener('click', showSelectResult);
-
+bbq.addEventListener('click', sendRequest);
   function sendRequest() {
     let s = document.querySelector('#nishita[name="itiran"]');
     let idx = s.selectedIndex
