@@ -50,8 +50,8 @@ let data = {
 ////////// 課題3-2 ここからプログラムを書こう
 
   
-let a = document.querySelector('#sendRequest');
-a.addEventListener('click', sendRequest);
+let bbq = document.querySelector('button#print');
+bbq.addEventListener('click', sendRequest);
 
   function sendRequest() {
     let a = document.querySelector('#nishita[name="itiran"]');
